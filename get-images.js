@@ -21,7 +21,7 @@ const writeImges = async function ({ images: imageURLArr, category: catName, ind
 
 				console.log(`Image ${imageName} saved successfully.`);
 			} catch (error) {
-				console.error(`Error fetching image ${imageName}:`, err);
+				console.error(`Error fetching image ${imageName}:`, error);
 				errorImges.push({ images: imageURLArr, category: catName, index });
 				fs.writeFileSync("./errorImages.txt", JSON.stringify(errorImges), { encoding: "utf-8" });
 			}
