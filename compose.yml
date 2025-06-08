@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: n8n-server
+    container_name: images-getter
     build:
       context: .
       tags:
