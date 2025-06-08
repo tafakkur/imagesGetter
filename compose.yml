@@ -1,5 +1,10 @@
 services:
   app:
-    image: myapp:latest
+    container_name: n8n-server
+    build:
+      context: .
+      tags:
+        - myapp:latest
     volumes:
       - ./Images:/home/imageGetter/Images
+    restart: unless-stopped
